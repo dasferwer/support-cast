@@ -1,0 +1,3579 @@
+{
+  "version": "sandy-v1",
+  "dataset": {
+    "name": "FiveThirtyEight Sandy-related NYC 311 calls by day",
+    "upstream": "https://github.com/fivethirtyeight/data/tree/e0c8091a3ba3be547b15a704b1ceb25b211e676b/sandy-311-calls",
+    "revision": "e0c8091a3ba3be547b15a704b1ceb25b211e676b",
+    "files_sha256": {
+      "calls.csv": "3b9c7812ab369b6d0a22de2dc66941f3195f156cdc8fdb4d046eab4499615e54",
+      "UPSTREAM.md": "b5c2258243e8af565258d25f36dacf2ad4fd3defc469eb5fbf1ca3f9c104578b",
+      "DATA-LICENSE.txt": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    }
+  },
+  "rows": 801,
+  "first_day": "2012-10-22",
+  "last_day": "2014-12-31",
+  "validation_start": "2014-09-11",
+  "test_start": "2014-11-06",
+  "selected_alpha": 100,
+  "selected_algorithm": "ridge",
+  "validation_trials": [
+    {
+      "alpha": 1,
+      "mae": 1.7182142857142857,
+      "periods": [
+        {
+          "origin": "2014-09-10",
+          "fit_through": "2014-09-10",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.4285714285714284,
+              "wape": 0.8571428571428571,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 14.0
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 11.0
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 10.0
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.0142857142857142,
+              "wape": 0.25357142857142856,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 7.36
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 5.93
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 1.28
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 1.01
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 6.04
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 5.08
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.04
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-17",
+          "fit_through": "2014-09-17",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.6666666666666666,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.6985714285714286,
+              "wape": 0.6605555555555556,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 6.76
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 6.17
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 0.81
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.02
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 4.94
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 5.19
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 5.0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-24",
+          "fit_through": "2014-09-24",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.142857142857143,
+              "wape": 0.6111111111111112,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 2.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.93,
+              "wape": 0.5697222222222222,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 3.61
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.31
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.35
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 0.07
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 3.45
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 4.18
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 2.84
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-01",
+          "fit_through": "2014-10-01",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.857142857142857,
+              "wape": 1.0,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 12.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.5071428571428573,
+              "wape": 0.5275000000000001,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.44
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 5.23
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.87
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 1.25
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 5.19
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 6.3
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 6.01
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-08",
+          "fit_through": "2014-10-08",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.727142857142857,
+              "wape": 0.755625,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 3.88
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 4.19
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 1.14
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 1.36
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 1.23
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 6.73
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 6.74
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-15",
+          "fit_through": "2014-10-15",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.5714285714285716,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 4.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.2342857142857144,
+              "wape": 0.36000000000000004,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 3.89
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 3.42
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 0.18
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 0.39
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 4.51
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 4.2
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 3.53
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-22",
+          "fit_through": "2014-10-22",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.0,
+              "wape": 0.28,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.542857142857143,
+              "wape": 0.43200000000000005,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 3.84
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 4.57
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.81
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 0.89
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 5.94
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 7.33
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 6.28
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-29",
+          "fit_through": "2014-10-29",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.5714285714285714,
+              "wape": 0.6875,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 7.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.0914285714285716,
+              "wape": 0.9149999999999999,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 3.95
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 3.66
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 0.96
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.81
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 5.14
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 5.74
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 7.22
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "alpha": 10,
+      "mae": 1.7337500000000001,
+      "periods": [
+        {
+          "origin": "2014-09-10",
+          "fit_through": "2014-09-10",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.4285714285714284,
+              "wape": 0.8571428571428571,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 14.0
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 11.0
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 10.0
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.2514285714285713,
+              "wape": 0.31285714285714283,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 7.58
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 6.21
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 1.37
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 1.1
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 6.34
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 5.8
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.78
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-17",
+          "fit_through": "2014-09-17",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.6666666666666666,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.335714285714286,
+              "wape": 0.9083333333333334,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 7.29
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 7.07
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 1.04
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.25
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 5.49
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 6.04
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 6.17
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-24",
+          "fit_through": "2014-09-24",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.142857142857143,
+              "wape": 0.6111111111111112,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 2.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.8128571428571427,
+              "wape": 0.5469444444444443,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 3.93
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.67
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.43
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 0.15
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 3.66
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 4.44
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 3.23
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-01",
+          "fit_through": "2014-10-01",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.857142857142857,
+              "wape": 1.0,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 12.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.492857142857143,
+              "wape": 0.5225000000000001,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.44
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 5.11
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.85
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 1.24
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 5.23
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 6.11
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 5.83
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-08",
+          "fit_through": "2014-10-08",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.4542857142857142,
+              "wape": 0.63625,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 3.84
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 3.96
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 1.01
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 1.21
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 1.14
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 5.81
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 5.91
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-15",
+          "fit_through": "2014-10-15",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.5714285714285716,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 4.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.2785714285714285,
+              "wape": 0.37291666666666673,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 3.82
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 3.27
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 0.19
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 0.42
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 4.25
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 3.87
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 3.35
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-22",
+          "fit_through": "2014-10-22",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.0,
+              "wape": 0.28,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.385714285714286,
+              "wape": 0.38800000000000007,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 3.72
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 4.13
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.74
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 0.85
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 5.45
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 6.57
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 5.84
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-29",
+          "fit_through": "2014-10-29",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.5714285714285714,
+              "wape": 0.6875,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 7.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.8585714285714285,
+              "wape": 0.813125,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 3.87
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 3.43
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 0.89
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.74
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 4.57
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 5.1
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 6.49
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "alpha": 100,
+      "mae": 1.6253571428571427,
+      "periods": [
+        {
+          "origin": "2014-09-10",
+          "fit_through": "2014-09-10",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.4285714285714284,
+              "wape": 0.8571428571428571,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 14.0
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 11.0
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 10.0
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.3157142857142858,
+              "wape": 0.3289285714285714,
+              "samples": [
+                {
+                  "day": "2014-09-11",
+                  "actual": 5,
+                  "forecast": 6.88
+                },
+                {
+                  "day": "2014-09-12",
+                  "actual": 5,
+                  "forecast": 5.75
+                },
+                {
+                  "day": "2014-09-13",
+                  "actual": 2,
+                  "forecast": 1.2
+                },
+                {
+                  "day": "2014-09-14",
+                  "actual": 1,
+                  "forecast": 0.9
+                },
+                {
+                  "day": "2014-09-15",
+                  "actual": 7,
+                  "forecast": 5.2
+                },
+                {
+                  "day": "2014-09-16",
+                  "actual": 3,
+                  "forecast": 6.09
+                },
+                {
+                  "day": "2014-09-17",
+                  "actual": 5,
+                  "forecast": 5.79
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-17",
+          "fit_through": "2014-09-17",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.6666666666666666,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 5.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.154285714285714,
+              "wape": 0.8377777777777777,
+              "samples": [
+                {
+                  "day": "2014-09-18",
+                  "actual": 6,
+                  "forecast": 7.05
+                },
+                {
+                  "day": "2014-09-19",
+                  "actual": 4,
+                  "forecast": 6.81
+                },
+                {
+                  "day": "2014-09-20",
+                  "actual": 0,
+                  "forecast": 1.22
+                },
+                {
+                  "day": "2014-09-21",
+                  "actual": 1,
+                  "forecast": 1.09
+                },
+                {
+                  "day": "2014-09-22",
+                  "actual": 4,
+                  "forecast": 4.66
+                },
+                {
+                  "day": "2014-09-23",
+                  "actual": 1,
+                  "forecast": 5.98
+                },
+                {
+                  "day": "2014-09-24",
+                  "actual": 2,
+                  "forecast": 6.27
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-09-24",
+          "fit_through": "2014-09-24",
+          "algorithms": {
+            "weekly": {
+              "mae": 3.142857142857143,
+              "wape": 0.6111111111111112,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 2.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 2.6785714285714284,
+              "wape": 0.5208333333333334,
+              "samples": [
+                {
+                  "day": "2014-09-25",
+                  "actual": 5,
+                  "forecast": 4.74
+                },
+                {
+                  "day": "2014-09-26",
+                  "actual": 3,
+                  "forecast": 4.91
+                },
+                {
+                  "day": "2014-09-27",
+                  "actual": 0,
+                  "forecast": 0.6
+                },
+                {
+                  "day": "2014-09-28",
+                  "actual": 3,
+                  "forecast": 0.36
+                },
+                {
+                  "day": "2014-09-29",
+                  "actual": 6,
+                  "forecast": 3.63
+                },
+                {
+                  "day": "2014-09-30",
+                  "actual": 7,
+                  "forecast": 4.32
+                },
+                {
+                  "day": "2014-10-01",
+                  "actual": 12,
+                  "forecast": 3.71
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-01",
+          "fit_through": "2014-10-01",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.857142857142857,
+              "wape": 1.0,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 7.0
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 12.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.487142857142857,
+              "wape": 0.5205,
+              "samples": [
+                {
+                  "day": "2014-10-02",
+                  "actual": 3,
+                  "forecast": 5.54
+                },
+                {
+                  "day": "2014-10-03",
+                  "actual": 4,
+                  "forecast": 4.71
+                },
+                {
+                  "day": "2014-10-04",
+                  "actual": 1,
+                  "forecast": 0.9
+                },
+                {
+                  "day": "2014-10-05",
+                  "actual": 0,
+                  "forecast": 1.34
+                },
+                {
+                  "day": "2014-10-06",
+                  "actual": 3,
+                  "forecast": 5.47
+                },
+                {
+                  "day": "2014-10-07",
+                  "actual": 3,
+                  "forecast": 5.7
+                },
+                {
+                  "day": "2014-10-08",
+                  "actual": 6,
+                  "forecast": 5.45
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-08",
+          "fit_through": "2014-10-08",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.7142857142857142,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.2242857142857144,
+              "wape": 0.535625,
+              "samples": [
+                {
+                  "day": "2014-10-09",
+                  "actual": 1,
+                  "forecast": 4.18
+                },
+                {
+                  "day": "2014-10-10",
+                  "actual": 1,
+                  "forecast": 3.71
+                },
+                {
+                  "day": "2014-10-11",
+                  "actual": 1,
+                  "forecast": 0.97
+                },
+                {
+                  "day": "2014-10-12",
+                  "actual": 2,
+                  "forecast": 1.25
+                },
+                {
+                  "day": "2014-10-13",
+                  "actual": 2,
+                  "forecast": 1.47
+                },
+                {
+                  "day": "2014-10-14",
+                  "actual": 5,
+                  "forecast": 4.77
+                },
+                {
+                  "day": "2014-10-15",
+                  "actual": 4,
+                  "forecast": 5.14
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-15",
+          "fit_through": "2014-10-15",
+          "algorithms": {
+            "weekly": {
+              "mae": 2.5714285714285716,
+              "wape": 0.75,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 4.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.3071428571428572,
+              "wape": 0.38125000000000003,
+              "samples": [
+                {
+                  "day": "2014-10-16",
+                  "actual": 6,
+                  "forecast": 3.73
+                },
+                {
+                  "day": "2014-10-17",
+                  "actual": 4,
+                  "forecast": 2.94
+                },
+                {
+                  "day": "2014-10-18",
+                  "actual": 0,
+                  "forecast": 0.42
+                },
+                {
+                  "day": "2014-10-19",
+                  "actual": 1,
+                  "forecast": 0.76
+                },
+                {
+                  "day": "2014-10-20",
+                  "actual": 5,
+                  "forecast": 3.9
+                },
+                {
+                  "day": "2014-10-21",
+                  "actual": 2,
+                  "forecast": 3.64
+                },
+                {
+                  "day": "2014-10-22",
+                  "actual": 6,
+                  "forecast": 3.58
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-22",
+          "fit_through": "2014-10-22",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.0,
+              "wape": 0.28,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 5.0
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 2.0
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 6.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.2842857142857143,
+              "wape": 0.35960000000000003,
+              "samples": [
+                {
+                  "day": "2014-10-23",
+                  "actual": 6,
+                  "forecast": 3.71
+                },
+                {
+                  "day": "2014-10-24",
+                  "actual": 4,
+                  "forecast": 3.22
+                },
+                {
+                  "day": "2014-10-25",
+                  "actual": 1,
+                  "forecast": 0.76
+                },
+                {
+                  "day": "2014-10-26",
+                  "actual": 0,
+                  "forecast": 1.08
+                },
+                {
+                  "day": "2014-10-27",
+                  "actual": 3,
+                  "forecast": 4.73
+                },
+                {
+                  "day": "2014-10-28",
+                  "actual": 4,
+                  "forecast": 5.43
+                },
+                {
+                  "day": "2014-10-29",
+                  "actual": 7,
+                  "forecast": 5.56
+                }
+              ]
+            }
+          }
+        },
+        {
+          "origin": "2014-10-29",
+          "fit_through": "2014-10-29",
+          "algorithms": {
+            "weekly": {
+              "mae": 1.5714285714285714,
+              "wape": 0.6875,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 6.0
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 1.0
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.0
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 3.0
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 4.0
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 7.0
+                }
+              ]
+            },
+            "ridge": {
+              "mae": 1.5514285714285714,
+              "wape": 0.67875,
+              "samples": [
+                {
+                  "day": "2014-10-30",
+                  "actual": 5,
+                  "forecast": 4.03
+                },
+                {
+                  "day": "2014-10-31",
+                  "actual": 4,
+                  "forecast": 3.25
+                },
+                {
+                  "day": "2014-11-01",
+                  "actual": 0,
+                  "forecast": 0.98
+                },
+                {
+                  "day": "2014-11-02",
+                  "actual": 1,
+                  "forecast": 0.89
+                },
+                {
+                  "day": "2014-11-03",
+                  "actual": 1,
+                  "forecast": 3.78
+                },
+                {
+                  "day": "2014-11-04",
+                  "actual": 2,
+                  "forecast": 4.5
+                },
+                {
+                  "day": "2014-11-05",
+                  "actual": 3,
+                  "forecast": 5.77
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "test_periods": [
+    {
+      "origin": "2014-11-05",
+      "fit_through": "2014-11-05",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.4285714285714286,
+          "wape": 0.7142857142857143,
+          "samples": [
+            {
+              "day": "2014-11-06",
+              "actual": 1,
+              "forecast": 5.0
+            },
+            {
+              "day": "2014-11-07",
+              "actual": 3,
+              "forecast": 4.0
+            },
+            {
+              "day": "2014-11-08",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-11-09",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-10",
+              "actual": 3,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-11",
+              "actual": 1,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-11-12",
+              "actual": 4,
+              "forecast": 3.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.5928571428571429,
+          "wape": 0.29642857142857143,
+          "samples": [
+            {
+              "day": "2014-11-06",
+              "actual": 1,
+              "forecast": 3.5
+            },
+            {
+              "day": "2014-11-07",
+              "actual": 3,
+              "forecast": 3.01
+            },
+            {
+              "day": "2014-11-08",
+              "actual": 1,
+              "forecast": 0.5
+            },
+            {
+              "day": "2014-11-09",
+              "actual": 1,
+              "forecast": 0.66
+            },
+            {
+              "day": "2014-11-10",
+              "actual": 3,
+              "forecast": 3.12
+            },
+            {
+              "day": "2014-11-11",
+              "actual": 1,
+              "forecast": 0.43
+            },
+            {
+              "day": "2014-11-12",
+              "actual": 4,
+              "forecast": 4.11
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-11-12",
+      "fit_through": "2014-11-12",
+      "algorithms": {
+        "weekly": {
+          "mae": 2.4285714285714284,
+          "wape": 0.8095238095238095,
+          "samples": [
+            {
+              "day": "2014-11-13",
+              "actual": 4,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-14",
+              "actual": 0,
+              "forecast": 3.0
+            },
+            {
+              "day": "2014-11-15",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-16",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-17",
+              "actual": 4,
+              "forecast": 3.0
+            },
+            {
+              "day": "2014-11-18",
+              "actual": 7,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-19",
+              "actual": 6,
+              "forecast": 4.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 1.742857142857143,
+          "wape": 0.5809523809523809,
+          "samples": [
+            {
+              "day": "2014-11-13",
+              "actual": 4,
+              "forecast": 3.84
+            },
+            {
+              "day": "2014-11-14",
+              "actual": 0,
+              "forecast": 3.1
+            },
+            {
+              "day": "2014-11-15",
+              "actual": 0,
+              "forecast": 0.5
+            },
+            {
+              "day": "2014-11-16",
+              "actual": 0,
+              "forecast": 0.52
+            },
+            {
+              "day": "2014-11-17",
+              "actual": 4,
+              "forecast": 2.72
+            },
+            {
+              "day": "2014-11-18",
+              "actual": 7,
+              "forecast": 2.96
+            },
+            {
+              "day": "2014-11-19",
+              "actual": 6,
+              "forecast": 3.4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-11-19",
+      "fit_through": "2014-11-19",
+      "algorithms": {
+        "weekly": {
+          "mae": 2.0,
+          "wape": 1.2727272727272727,
+          "samples": [
+            {
+              "day": "2014-11-20",
+              "actual": 1,
+              "forecast": 4.0
+            },
+            {
+              "day": "2014-11-21",
+              "actual": 2,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-11-22",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-11-23",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-11-24",
+              "actual": 2,
+              "forecast": 4.0
+            },
+            {
+              "day": "2014-11-25",
+              "actual": 1,
+              "forecast": 7.0
+            },
+            {
+              "day": "2014-11-26",
+              "actual": 5,
+              "forecast": 6.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 1.4614285714285715,
+          "wape": 0.93,
+          "samples": [
+            {
+              "day": "2014-11-20",
+              "actual": 1,
+              "forecast": 3.63
+            },
+            {
+              "day": "2014-11-21",
+              "actual": 2,
+              "forecast": 3.21
+            },
+            {
+              "day": "2014-11-22",
+              "actual": 0,
+              "forecast": 0.79
+            },
+            {
+              "day": "2014-11-23",
+              "actual": 0,
+              "forecast": 0.68
+            },
+            {
+              "day": "2014-11-24",
+              "actual": 2,
+              "forecast": 3.76
+            },
+            {
+              "day": "2014-11-25",
+              "actual": 1,
+              "forecast": 4.11
+            },
+            {
+              "day": "2014-11-26",
+              "actual": 5,
+              "forecast": 4.95
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-11-26",
+      "fit_through": "2014-11-26",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.5714285714285714,
+          "wape": 1.375,
+          "samples": [
+            {
+              "day": "2014-11-27",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-11-28",
+              "actual": 1,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-11-29",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-11-30",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-01",
+              "actual": 3,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-02",
+              "actual": 4,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-12-03",
+              "actual": 0,
+              "forecast": 5.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.8828571428571428,
+          "wape": 0.7725000000000001,
+          "samples": [
+            {
+              "day": "2014-11-27",
+              "actual": 0,
+              "forecast": 0.16
+            },
+            {
+              "day": "2014-11-28",
+              "actual": 1,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-11-29",
+              "actual": 0,
+              "forecast": 0.37
+            },
+            {
+              "day": "2014-11-30",
+              "actual": 0,
+              "forecast": 0.43
+            },
+            {
+              "day": "2014-12-01",
+              "actual": 3,
+              "forecast": 2.86
+            },
+            {
+              "day": "2014-12-02",
+              "actual": 4,
+              "forecast": 3.32
+            },
+            {
+              "day": "2014-12-03",
+              "actual": 0,
+              "forecast": 3.4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-12-03",
+      "fit_through": "2014-12-03",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.7142857142857142,
+          "wape": 1.2,
+          "samples": [
+            {
+              "day": "2014-12-04",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-05",
+              "actual": 2,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-12-06",
+              "actual": 2,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-07",
+              "actual": 2,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-08",
+              "actual": 2,
+              "forecast": 3.0
+            },
+            {
+              "day": "2014-12-09",
+              "actual": 0,
+              "forecast": 4.0
+            },
+            {
+              "day": "2014-12-10",
+              "actual": 1,
+              "forecast": 0.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 1.3257142857142858,
+          "wape": 0.9279999999999999,
+          "samples": [
+            {
+              "day": "2014-12-04",
+              "actual": 1,
+              "forecast": 1.62
+            },
+            {
+              "day": "2014-12-05",
+              "actual": 2,
+              "forecast": 1.57
+            },
+            {
+              "day": "2014-12-06",
+              "actual": 2,
+              "forecast": 0.05
+            },
+            {
+              "day": "2014-12-07",
+              "actual": 2,
+              "forecast": 0.27
+            },
+            {
+              "day": "2014-12-08",
+              "actual": 2,
+              "forecast": 2.32
+            },
+            {
+              "day": "2014-12-09",
+              "actual": 0,
+              "forecast": 2.73
+            },
+            {
+              "day": "2014-12-10",
+              "actual": 1,
+              "forecast": 2.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-12-10",
+      "fit_through": "2014-12-10",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.8571428571428572,
+          "wape": 1.1818181818181819,
+          "samples": [
+            {
+              "day": "2014-12-11",
+              "actual": 3,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-12-12",
+              "actual": 0,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-13",
+              "actual": 0,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-14",
+              "actual": 0,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-15",
+              "actual": 2,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-16",
+              "actual": 4,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-17",
+              "actual": 2,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.9771428571428571,
+          "wape": 0.6218181818181818,
+          "samples": [
+            {
+              "day": "2014-12-11",
+              "actual": 3,
+              "forecast": 1.56
+            },
+            {
+              "day": "2014-12-12",
+              "actual": 0,
+              "forecast": 1.73
+            },
+            {
+              "day": "2014-12-13",
+              "actual": 0,
+              "forecast": 0.38
+            },
+            {
+              "day": "2014-12-14",
+              "actual": 0,
+              "forecast": 0.34
+            },
+            {
+              "day": "2014-12-15",
+              "actual": 2,
+              "forecast": 3.17
+            },
+            {
+              "day": "2014-12-16",
+              "actual": 4,
+              "forecast": 2.56
+            },
+            {
+              "day": "2014-12-17",
+              "actual": 2,
+              "forecast": 2.34
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-12-17",
+      "fit_through": "2014-12-17",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.2857142857142858,
+          "wape": 2.25,
+          "samples": [
+            {
+              "day": "2014-12-18",
+              "actual": 2,
+              "forecast": 3.0
+            },
+            {
+              "day": "2014-12-19",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-20",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-21",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-22",
+              "actual": 1,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-23",
+              "actual": 0,
+              "forecast": 4.0
+            },
+            {
+              "day": "2014-12-24",
+              "actual": 0,
+              "forecast": 2.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 1.1557142857142857,
+          "wape": 2.0225,
+          "samples": [
+            {
+              "day": "2014-12-18",
+              "actual": 2,
+              "forecast": 1.84
+            },
+            {
+              "day": "2014-12-19",
+              "actual": 1,
+              "forecast": 1.59
+            },
+            {
+              "day": "2014-12-20",
+              "actual": 0,
+              "forecast": 0.57
+            },
+            {
+              "day": "2014-12-21",
+              "actual": 0,
+              "forecast": 0.53
+            },
+            {
+              "day": "2014-12-22",
+              "actual": 1,
+              "forecast": 2.41
+            },
+            {
+              "day": "2014-12-23",
+              "actual": 0,
+              "forecast": 2.53
+            },
+            {
+              "day": "2014-12-24",
+              "actual": 0,
+              "forecast": 2.3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2014-12-24",
+      "fit_through": "2014-12-24",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.42857142857142855,
+          "wape": 1.0,
+          "samples": [
+            {
+              "day": "2014-12-25",
+              "actual": 0,
+              "forecast": 2.0
+            },
+            {
+              "day": "2014-12-26",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-12-27",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-28",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-29",
+              "actual": 2,
+              "forecast": 1.0
+            },
+            {
+              "day": "2014-12-30",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2014-12-31",
+              "actual": 0,
+              "forecast": 0.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.48857142857142855,
+          "wape": 1.14,
+          "samples": [
+            {
+              "day": "2014-12-25",
+              "actual": 0,
+              "forecast": 0
+            },
+            {
+              "day": "2014-12-26",
+              "actual": 1,
+              "forecast": 0.96
+            },
+            {
+              "day": "2014-12-27",
+              "actual": 0,
+              "forecast": 0.12
+            },
+            {
+              "day": "2014-12-28",
+              "actual": 0,
+              "forecast": 0.08
+            },
+            {
+              "day": "2014-12-29",
+              "actual": 2,
+              "forecast": 1.81
+            },
+            {
+              "day": "2014-12-30",
+              "actual": 0,
+              "forecast": 1.72
+            },
+            {
+              "day": "2014-12-31",
+              "actual": 0,
+              "forecast": 1.27
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "protocol": "Weekly rolling origins; 7 direct horizons; fit uses at most last 365 days; no future values in features",
+  "sparse_tail_periods": [
+    {
+      "origin": "2017-07-14",
+      "fit_through": "2017-07-14",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.5714285714285714,
+          "wape": 0.8461538461538461,
+          "samples": [
+            {
+              "day": "2017-07-15",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-16",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-17",
+              "actual": 3,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-18",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-19",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-07-20",
+              "actual": 6,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-21",
+              "actual": 1,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 1.4514285714285715,
+          "wape": 0.7815384615384615,
+          "samples": [
+            {
+              "day": "2017-07-15",
+              "actual": 1,
+              "forecast": 0.22
+            },
+            {
+              "day": "2017-07-16",
+              "actual": 0,
+              "forecast": 0.19
+            },
+            {
+              "day": "2017-07-17",
+              "actual": 3,
+              "forecast": 0.59
+            },
+            {
+              "day": "2017-07-18",
+              "actual": 1,
+              "forecast": 0.48
+            },
+            {
+              "day": "2017-07-19",
+              "actual": 1,
+              "forecast": 0.58
+            },
+            {
+              "day": "2017-07-20",
+              "actual": 6,
+              "forecast": 0.87
+            },
+            {
+              "day": "2017-07-21",
+              "actual": 1,
+              "forecast": 0.29
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-07-21",
+      "fit_through": "2017-07-21",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.4285714285714286,
+          "wape": 3.3333333333333335,
+          "samples": [
+            {
+              "day": "2017-07-22",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-07-23",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-24",
+              "actual": 0,
+              "forecast": 3.0
+            },
+            {
+              "day": "2017-07-25",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-07-26",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-07-27",
+              "actual": 1,
+              "forecast": 6.0
+            },
+            {
+              "day": "2017-07-28",
+              "actual": 1,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.33285714285714285,
+          "wape": 0.7766666666666667,
+          "samples": [
+            {
+              "day": "2017-07-22",
+              "actual": 0,
+              "forecast": 0.28
+            },
+            {
+              "day": "2017-07-23",
+              "actual": 0,
+              "forecast": 0.16
+            },
+            {
+              "day": "2017-07-24",
+              "actual": 0,
+              "forecast": 0.6
+            },
+            {
+              "day": "2017-07-25",
+              "actual": 1,
+              "forecast": 0.82
+            },
+            {
+              "day": "2017-07-26",
+              "actual": 0,
+              "forecast": 0.46
+            },
+            {
+              "day": "2017-07-27",
+              "actual": 1,
+              "forecast": 0.76
+            },
+            {
+              "day": "2017-07-28",
+              "actual": 1,
+              "forecast": 0.59
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-07-28",
+      "fit_through": "2017-07-28",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.7142857142857143,
+          "wape": 2.5,
+          "samples": [
+            {
+              "day": "2017-07-29",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-30",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-07-31",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-01",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-02",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-03",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-04",
+              "actual": 0,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.6371428571428572,
+          "wape": 2.23,
+          "samples": [
+            {
+              "day": "2017-07-29",
+              "actual": 1,
+              "forecast": 0.12
+            },
+            {
+              "day": "2017-07-30",
+              "actual": 0,
+              "forecast": 0.29
+            },
+            {
+              "day": "2017-07-31",
+              "actual": 1,
+              "forecast": 0.52
+            },
+            {
+              "day": "2017-08-01",
+              "actual": 0,
+              "forecast": 0.55
+            },
+            {
+              "day": "2017-08-02",
+              "actual": 0,
+              "forecast": 0.83
+            },
+            {
+              "day": "2017-08-03",
+              "actual": 0,
+              "forecast": 0.68
+            },
+            {
+              "day": "2017-08-04",
+              "actual": 0,
+              "forecast": 0.75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-08-04",
+      "fit_through": "2017-08-04",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.42857142857142855,
+          "wape": 1.0,
+          "samples": [
+            {
+              "day": "2017-08-05",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-06",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-07",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-08",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-09",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-10",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-11",
+              "actual": 1,
+              "forecast": 0.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.4442857142857143,
+          "wape": 1.0366666666666666,
+          "samples": [
+            {
+              "day": "2017-08-05",
+              "actual": 0,
+              "forecast": 0.09
+            },
+            {
+              "day": "2017-08-06",
+              "actual": 0,
+              "forecast": 0.03
+            },
+            {
+              "day": "2017-08-07",
+              "actual": 1,
+              "forecast": 0.74
+            },
+            {
+              "day": "2017-08-08",
+              "actual": 0,
+              "forecast": 0.62
+            },
+            {
+              "day": "2017-08-09",
+              "actual": 1,
+              "forecast": 0.39
+            },
+            {
+              "day": "2017-08-10",
+              "actual": 0,
+              "forecast": 0.98
+            },
+            {
+              "day": "2017-08-11",
+              "actual": 1,
+              "forecast": 0.48
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-08-11",
+      "fit_through": "2017-08-11",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.5714285714285714,
+          "wape": 1.3333333333333333,
+          "samples": [
+            {
+              "day": "2017-08-12",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-13",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-14",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-15",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-16",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-17",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-18",
+              "actual": 1,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.5385714285714286,
+          "wape": 1.2566666666666666,
+          "samples": [
+            {
+              "day": "2017-08-12",
+              "actual": 1,
+              "forecast": 0.31
+            },
+            {
+              "day": "2017-08-13",
+              "actual": 0,
+              "forecast": 0.35
+            },
+            {
+              "day": "2017-08-14",
+              "actual": 0,
+              "forecast": 0.59
+            },
+            {
+              "day": "2017-08-15",
+              "actual": 0,
+              "forecast": 1.03
+            },
+            {
+              "day": "2017-08-16",
+              "actual": 0,
+              "forecast": 0.47
+            },
+            {
+              "day": "2017-08-17",
+              "actual": 1,
+              "forecast": 0.82
+            },
+            {
+              "day": "2017-08-18",
+              "actual": 1,
+              "forecast": 0.54
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-08-18",
+      "fit_through": "2017-08-18",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.42857142857142855,
+          "wape": 1.5,
+          "samples": [
+            {
+              "day": "2017-08-19",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-20",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-21",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-22",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-23",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-24",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-25",
+              "actual": 0,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.42000000000000004,
+          "wape": 1.47,
+          "samples": [
+            {
+              "day": "2017-08-19",
+              "actual": 0,
+              "forecast": 0.28
+            },
+            {
+              "day": "2017-08-20",
+              "actual": 0,
+              "forecast": 0.3
+            },
+            {
+              "day": "2017-08-21",
+              "actual": 1,
+              "forecast": 0.66
+            },
+            {
+              "day": "2017-08-22",
+              "actual": 0,
+              "forecast": 0.65
+            },
+            {
+              "day": "2017-08-23",
+              "actual": 0,
+              "forecast": 0.42
+            },
+            {
+              "day": "2017-08-24",
+              "actual": 1,
+              "forecast": 0.71
+            },
+            {
+              "day": "2017-08-25",
+              "actual": 0,
+              "forecast": 0.66
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-08-25",
+      "fit_through": "2017-08-25",
+      "algorithms": {
+        "weekly": {
+          "mae": 0.5714285714285714,
+          "wape": 0.6666666666666666,
+          "samples": [
+            {
+              "day": "2017-08-26",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-27",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-28",
+              "actual": 1,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-08-29",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-30",
+              "actual": 1,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-08-31",
+              "actual": 2,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-09-01",
+              "actual": 1,
+              "forecast": 0.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.6314285714285715,
+          "wape": 0.7366666666666667,
+          "samples": [
+            {
+              "day": "2017-08-26",
+              "actual": 0,
+              "forecast": 0.27
+            },
+            {
+              "day": "2017-08-27",
+              "actual": 1,
+              "forecast": 0.23
+            },
+            {
+              "day": "2017-08-28",
+              "actual": 1,
+              "forecast": 0.52
+            },
+            {
+              "day": "2017-08-29",
+              "actual": 0,
+              "forecast": 0.47
+            },
+            {
+              "day": "2017-08-30",
+              "actual": 1,
+              "forecast": 0.44
+            },
+            {
+              "day": "2017-08-31",
+              "actual": 2,
+              "forecast": 0.58
+            },
+            {
+              "day": "2017-09-01",
+              "actual": 1,
+              "forecast": 0.55
+            }
+          ]
+        }
+      }
+    },
+    {
+      "origin": "2017-09-01",
+      "fit_through": "2017-09-01",
+      "algorithms": {
+        "weekly": {
+          "mae": 1.4285714285714286,
+          "wape": 1.6666666666666667,
+          "samples": [
+            {
+              "day": "2017-09-02",
+              "actual": 0,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-09-03",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-09-04",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-09-05",
+              "actual": 5,
+              "forecast": 0.0
+            },
+            {
+              "day": "2017-09-06",
+              "actual": 0,
+              "forecast": 1.0
+            },
+            {
+              "day": "2017-09-07",
+              "actual": 0,
+              "forecast": 2.0
+            },
+            {
+              "day": "2017-09-08",
+              "actual": 1,
+              "forecast": 1.0
+            }
+          ]
+        },
+        "ridge": {
+          "mae": 0.9714285714285714,
+          "wape": 1.1333333333333333,
+          "samples": [
+            {
+              "day": "2017-09-02",
+              "actual": 0,
+              "forecast": 0.3
+            },
+            {
+              "day": "2017-09-03",
+              "actual": 0,
+              "forecast": 0.16
+            },
+            {
+              "day": "2017-09-04",
+              "actual": 0,
+              "forecast": 0.19
+            },
+            {
+              "day": "2017-09-05",
+              "actual": 5,
+              "forecast": 0.56
+            },
+            {
+              "day": "2017-09-06",
+              "actual": 0,
+              "forecast": 0.49
+            },
+            {
+              "day": "2017-09-07",
+              "actual": 0,
+              "forecast": 0.79
+            },
+            {
+              "day": "2017-09-08",
+              "actual": 1,
+              "forecast": 0.57
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "scope_note": "2014 slice evaluated separately after inspecting sparsity in the 2017 tail; tail retained as a stress evaluation using the same selected alpha",
+  "test_summary": {
+    "weekly": {
+      "mae": 1.5892857142857142,
+      "wape": 1.0853658536585367,
+      "interval_coverage": 1.0
+    },
+    "ridge": {
+      "mae": 1.0783928571428572,
+      "wape": 0.7364634146341463,
+      "interval_coverage": 0.9642857142857143
+    }
+  },
+  "historical_period_end": "2014-12-31"
+}

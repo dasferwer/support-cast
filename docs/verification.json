@@ -1,0 +1,81 @@
+{
+  "verified_at_utc": "2026-09-11T14:53:17.553175+00:00",
+  "project": "supportcast",
+  "host": {
+    "system": "Darwin",
+    "architecture": "arm64"
+  },
+  "pytest_passed": 20,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "compose_config": "passed",
+  "seed_twice_preserves_existing_records": true,
+  "runtime": {
+    "uid": 999,
+    "python": "3.12.14",
+    "architecture": "aarch64",
+    "modules": {
+      "pytest": false,
+      "ruff": false,
+      "sklearn": false,
+      "pandas": false
+    }
+  },
+  "health": {
+    "status": "ok",
+    "model_version": "sandy-v1"
+  },
+  "services": [
+    {
+      "service": "api",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "database",
+      "state": "running",
+      "health": "healthy"
+    },
+    {
+      "service": "worker",
+      "state": "running",
+      "health": "healthy"
+    }
+  ],
+  "openapi_matches_local_app": true,
+  "openapi_sha256": "b2bfd15eb87669aac6e4b4dded2b0bcefc816a2a63eb62087ccc9ff6e258c8c1",
+  "metrics_endpoint": "passed",
+  "smoke": {
+    "ok": true,
+    "horizon": 7,
+    "automatic_refresh": true,
+    "idempotent_ingestion": true,
+    "immutable_snapshot": true,
+    "revision": 2
+  },
+  "recovery": {
+    "ok": true,
+    "fault": "SIGKILL forecaster",
+    "attempts": 2,
+    "same_job_id": true,
+    "revision": 1
+  },
+  "remote_ci": "not run; local repositories have not been published",
+  "model_test_summary": {
+    "weekly": {
+      "mae": 1.5892857142857142,
+      "wape": 1.0853658536585367,
+      "interval_coverage": 1.0
+    },
+    "ridge": {
+      "mae": 1.0783928571428572,
+      "wape": 0.7364634146341463,
+      "interval_coverage": 0.9642857142857143
+    }
+  },
+  "model_reproduction": {
+    "numeric_parameters_identical": true,
+    "evaluation_identical": true,
+    "demo_history_identical": true
+  }
+}

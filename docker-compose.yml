@@ -1,0 +1,87 @@
+name: 17-support-cast
+x-app: &app
+  build:
+    context: .
+    target: runtime
+  environment: &environment
+    DATABASE_URL: postgresql+asyncpg://supportcast:supportcast@database:5432/supportcast
+    JWT_SECRET: ${JWT_SECRET:-local-demo-supportcast-replace-before-deployment}
+    MODEL_DIR: /app/models
+    LEASE_SECONDS: ${LEASE_SECONDS:-15}
+    WORKER_DELAY_SECONDS: ${WORKER_DELAY_SECONDS:-0}
+  restart: unless-stopped
+  init: true
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: supportcast
+      POSTGRES_USER: supportcast
+      POSTGRES_PASSWORD: supportcast
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U supportcast -d supportcast"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  migrate:
+    <<: *app
+    command: ["sh", "-c", "alembic upgrade head && python scripts/seed.py"]
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: "no"
+  api:
+    <<: *app
+    ports:
+      - "127.0.0.1:8170:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  worker:
+    <<: *app
+    command: ["python", "-m", "supportcast.worker"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "scripts/worker_health.py"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+  test-db:
+    image: postgres:17-alpine
+    profiles: ["test"]
+    environment:
+      POSTGRES_DB: supportcast_test
+      POSTGRES_USER: supportcast
+      POSTGRES_PASSWORD: supportcast
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U supportcast -d supportcast_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  test:
+    build:
+      context: .
+      target: test
+    profiles: ["test"]
+    environment:
+      <<: *environment
+      DATABASE_URL: postgresql+asyncpg://supportcast:supportcast@test-db:5432/supportcast_test
+      TESTING: "true"
+    depends_on:
+      test-db:
+        condition: service_healthy
+    init: true
+volumes:
+  postgres_data:

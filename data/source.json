@@ -1,0 +1,10 @@
+{
+  "name": "FiveThirtyEight Sandy-related NYC 311 calls by day",
+  "upstream": "https://github.com/fivethirtyeight/data/tree/e0c8091a3ba3be547b15a704b1ceb25b211e676b/sandy-311-calls",
+  "revision": "e0c8091a3ba3be547b15a704b1ceb25b211e676b",
+  "files_sha256": {
+    "calls.csv": "3b9c7812ab369b6d0a22de2dc66941f3195f156cdc8fdb4d046eab4499615e54",
+    "UPSTREAM.md": "b5c2258243e8af565258d25f36dacf2ad4fd3defc469eb5fbf1ca3f9c104578b",
+    "DATA-LICENSE.txt": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+  }
+}
