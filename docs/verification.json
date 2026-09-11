@@ -60,7 +60,7 @@
     "same_job_id": true,
     "revision": 1
   },
-  "remote_ci": "not run; local repositories have not been published",
+  "remote_ci": "Not part of this local verification. Current runs: https://github.com/dasferwer/support-cast/actions",
   "model_test_summary": {
     "weekly": {
       "mae": 1.5892857142857142,
