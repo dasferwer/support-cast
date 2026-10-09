@@ -1,0 +1,3 @@
+# Исходные данные сохраняются побайтно (upstream CRLF), без нормализации и text diff.
+data/independent/day.csv -text -diff
+data/independent/Readme.txt -text -diff
