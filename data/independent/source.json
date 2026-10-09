@@ -1,0 +1,14 @@
+{
+  "name": "UCI Bike Sharing",
+  "creator": "Hadi Fanaee-T",
+  "citation": "Fanaee-T, H. (2013). Bike Sharing [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5W894",
+  "page": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+  "download": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+  "license": "CC BY 4.0; https://creativecommons.org/licenses/by/4.0/",
+  "zip_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+  "files_sha256": {
+    "day.csv": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+    "Readme.txt": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175"
+  },
+  "transformation": "Без изменения исходного CSV; выбраны day/casual/registered. Синтетические stress-преобразования только в памяти."
+}

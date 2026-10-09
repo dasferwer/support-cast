@@ -26,6 +26,7 @@ RUN --mount=type=bind,from=builder,source=/wheels,target=/wheels pip install --n
 COPY pyproject.toml ./
 COPY tests ./tests
 COPY data ./data
+COPY docs/independent-evaluation.json ./docs/independent-evaluation.json
 USER app
 CMD ["sh", "-c", "alembic upgrade head && pytest"]
 

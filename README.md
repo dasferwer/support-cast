@@ -54,3 +54,7 @@ Python 3.12, FastAPI, PostgreSQL 17, SQLAlchemy, Alembic, NumPy; pandas и sciki
 - [Снимок OpenAPI](docs/openapi.json)
 
 Код — [MIT](LICENSE). Исходные данные — [CC BY 4.0](data/DATA-LICENSE.txt), с отдельной атрибуцией в `models/ATTRIBUTION.md`.
+
+## Независимая проверка качества
+
+Два лицензированных UCI Bike Sharing ряда, временная калибровка до test и четыре режима (исходный, пропуски, новый уровень, выбросы): [протокол, результаты и ограничения](docs/independent-evaluation.md). MAE/WAPE и coverage по каждому из семи горизонтов сохранены в JSON. Прямой перенос Sandy-интервалов даёт почти нулевое покрытие; отдельная калибровка улучшает его, но не гарантирует номинальные 90% при смене уровня. Production artifact не изменён.
